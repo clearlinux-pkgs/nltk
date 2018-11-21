@@ -4,7 +4,7 @@
 #
 Name     : nltk
 Version  : 3.4
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/6f/ed/9c755d357d33bc1931e157f537721efb5b88d2c583fe593cc09603076cc3/nltk-3.4.zip
 Source0  : https://files.pythonhosted.org/packages/6f/ed/9c755d357d33bc1931e157f537721efb5b88d2c583fe593cc09603076cc3/nltk-3.4.zip
 Summary  : Natural Language Toolkit
@@ -63,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542759556
+export SOURCE_DATE_EPOCH=1542839341
 python3 setup.py build
 
 %install
