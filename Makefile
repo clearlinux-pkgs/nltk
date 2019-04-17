@@ -1,5 +1,5 @@
 PKG_NAME := nltk
-URL = https://files.pythonhosted.org/packages/6f/ed/9c755d357d33bc1931e157f537721efb5b88d2c583fe593cc09603076cc3/nltk-3.4.zip
+URL = https://files.pythonhosted.org/packages/73/56/90178929712ce427ebad179f8dc46c8deef4e89d4c853092bee1efd57d05/nltk-3.4.1.zip
 ARCHIVES = 
 
 include ../common/Makefile.common
