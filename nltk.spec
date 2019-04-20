@@ -4,7 +4,7 @@
 #
 Name     : nltk
 Version  : 3.4.1
-Release  : 7
+Release  : 8
 URL      : https://files.pythonhosted.org/packages/73/56/90178929712ce427ebad179f8dc46c8deef4e89d4c853092bee1efd57d05/nltk-3.4.1.zip
 Source0  : https://files.pythonhosted.org/packages/73/56/90178929712ce427ebad179f8dc46c8deef4e89d4c853092bee1efd57d05/nltk-3.4.1.zip
 Summary  : Natural Language Toolkit
