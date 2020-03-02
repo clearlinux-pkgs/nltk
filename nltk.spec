@@ -4,7 +4,7 @@
 #
 Name     : nltk
 Version  : 3.4.5
-Release  : 15
+Release  : 16
 URL      : https://files.pythonhosted.org/packages/f6/1d/d925cfb4f324ede997f6d47bea4d9babba51b49e87a767c170b77005889d/nltk-3.4.5.zip
 Source0  : https://files.pythonhosted.org/packages/f6/1d/d925cfb4f324ede997f6d47bea4d9babba51b49e87a767c170b77005889d/nltk-3.4.5.zip
 Summary  : Natural Language Toolkit
@@ -36,9 +36,8 @@ BuildRequires : singledispatch
 BuildRequires : six
 
 %description
-# Natural Language Toolkit (NLTK)
-[![PyPI](https://img.shields.io/pypi/v/nltk.svg)](https://pypi.python.org/pypi/nltk)
-[![Travis](https://travis-ci.org/nltk/nltk.svg?branch=develop)](https://travis-ci.org/nltk/nltk)
+The Natural Language Toolkit (NLTK) is a Python package for
+natural language processing.  NLTK requires Python 2.7, 3.5, 3.6, or 3.7.
 
 %package license
 Summary: license components for the nltk package.
@@ -61,6 +60,7 @@ python components for the nltk package.
 Summary: python3 components for the nltk package.
 Group: Default
 Requires: python3-core
+Provides: pypi(nltk)
 
 %description python3
 python3 components for the nltk package.
@@ -68,13 +68,14 @@ python3 components for the nltk package.
 
 %prep
 %setup -q -n nltk-3.4.5
+cd %{_builddir}/nltk-3.4.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566310347
+export SOURCE_DATE_EPOCH=1583186889
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -91,7 +92,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nltk
-cp LICENSE.txt %{buildroot}/usr/share/package-licenses/nltk/LICENSE.txt
+cp %{_builddir}/nltk-3.4.5/LICENSE.txt %{buildroot}/usr/share/package-licenses/nltk/1f28e61bc785b86e5372ef7f3fa238778c52c04c
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -102,7 +103,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/nltk/LICENSE.txt
+/usr/share/package-licenses/nltk/1f28e61bc785b86e5372ef7f3fa238778c52c04c
 
 %files python
 %defattr(-,root,root,-)
