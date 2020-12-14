@@ -4,7 +4,7 @@
 #
 Name     : nltk
 Version  : 3.5
-Release  : 20
+Release  : 21
 URL      : https://files.pythonhosted.org/packages/92/75/ce35194d8e3022203cca0d2f896dbb88689f9b3fce8e9f9cff942913519d/nltk-3.5.zip
 Source0  : https://files.pythonhosted.org/packages/92/75/ce35194d8e3022203cca0d2f896dbb88689f9b3fce8e9f9cff942913519d/nltk-3.5.zip
 Summary  : Natural Language Toolkit
